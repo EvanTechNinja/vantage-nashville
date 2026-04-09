@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="view-transition" content="same-origin">
 
   <!-- Google Analytics GA4 — uncomment and replace GA_MEASUREMENT_ID when ready
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -22,8 +23,11 @@
 </head>
 <body class="font-body text-gray-900 bg-white">
 
+  <!-- Page Load Overlay -->
+  <div id="page-load-overlay" aria-hidden="true"></div>
+
   <!-- ============ HEADER / NAV ============ -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-border transition-shadow duration-300">
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md saturate-[1.8] border-b border-warm-border transition-shadow duration-300">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
       <!-- Logo -->
       <a href="index.html" class="font-heading text-2xl font-bold tracking-[0.15em] text-navy">
@@ -64,16 +68,16 @@
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="relative pt-20">
-      <div class="relative min-h-[600px] flex items-center">
-        <img src="img/hero-lobby.jpg" alt="Vantage coworking lobby and reception" class="absolute inset-0 w-full h-full object-cover">
+    <section class="hero-section relative pt-20">
+      <div class="relative min-h-[600px] flex items-center overflow-hidden">
+        <img src="img/hero-lobby.jpg" alt="Vantage coworking lobby and reception" class="hero-bg absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-navy/70"></div>
-        <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
-          <div class="max-w-2xl">
-            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Welcome to Vantage</h1>
-            <p class="font-heading text-xl md:text-2xl text-bronze-light mb-6">Discover Nashville's Premier Workspace</p>
-            <p class="text-white/80 text-lg leading-relaxed mb-8">Vantage, where elevated workspace meets intention and opportunity. Designed for professionals, we offer an exceptional environment for freelancers, entrepreneurs, and small businesses seeking a refined office experience in Nashville.</p>
-            <div class="flex flex-wrap gap-4">
+        <div class="relative max-w-7xl mx-auto px-6 py-24 md:py-32 w-full hero-glow">
+          <div class="max-w-2xl relative z-10">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4" style="opacity:0">Welcome to Vantage</h1>
+            <p class="hero-subtitle font-heading text-xl md:text-2xl gradient-text mb-6">Discover Nashville's Premier Workspace</p>
+            <p class="hero-body text-white/80 text-lg leading-relaxed mb-8">Vantage, where elevated workspace meets intention and opportunity. Designed for professionals, we offer an exceptional environment for freelancers, entrepreneurs, and small businesses seeking a refined office experience in Nashville.</p>
+            <div class="hero-ctas flex flex-wrap gap-4">
               <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Schedule a Tour</button>
               <button onclick="openInquiryModal()" class="cta-button-outline border-white/60 text-white hover:bg-white hover:text-navy">Inquire for More Info</button>
             </div>
@@ -81,6 +85,13 @@
         </div>
       </div>
     </section>
+
+    <!-- Wave Divider: Navy to White -->
+    <div class="wave-divider" style="margin-top:-2px; background:#fff;">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C360,80 1080,0 1440,60 L1440,0 L0,0 Z" fill="#1B2A4A"/>
+      </svg>
+    </div>
 
     <!-- ============ WHO WE ARE ============ -->
     <section class="section-padding bg-white">
@@ -94,11 +105,11 @@
     <!-- ============ VALUE PROPS ============ -->
     <section class="section-padding bg-warm-bg">
       <div class="container-narrow">
-        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+        <div class="value-props-grid grid md:grid-cols-3 gap-8 lg:gap-12">
 
           <!-- Prime Location -->
           <div class="text-center md:text-left">
-            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <div class="value-icon w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
               <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
             </div>
             <h3 class="font-heading text-xl font-semibold text-navy mb-3">Prime Location</h3>
@@ -107,7 +118,7 @@
 
           <!-- Membership Services -->
           <div class="text-center md:text-left">
-            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <div class="value-icon w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
               <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
             </div>
             <h3 class="font-heading text-xl font-semibold text-navy mb-3">Membership Services to Fit Your Needs</h3>
@@ -116,7 +127,7 @@
 
           <!-- Event Spaces -->
           <div class="text-center md:text-left">
-            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+            <div class="value-icon w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
               <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
             </div>
             <h3 class="font-heading text-xl font-semibold text-navy mb-3">Competitively Priced Event Spaces</h3>
@@ -135,7 +146,7 @@
           <p class="text-gray-500 text-lg">Find the workspace solution that fits your business</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="membership-grid grid md:grid-cols-3 gap-8">
 
           <!-- Virtual Office -->
           <div class="bg-white border border-warm-border rounded-lg p-8 shadow-card hover:shadow-lg transition-shadow duration-300">
@@ -192,25 +203,32 @@
     <!-- ============ PHOTO GALLERY STRIP ============ -->
     <section class="section-padding bg-white">
       <div class="container-narrow">
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="gallery-grid gallery-scroll grid md:grid-cols-3 gap-6">
           <div class="aspect-video rounded-lg overflow-hidden">
-            <img src="img/gallery-coworking.jpg" alt="Open coworking space with communal table" class="w-full h-full object-cover">
+            <img src="img/gallery-coworking.jpg" alt="Open coworking space with communal table" class="w-full h-full object-cover" loading="lazy" decoding="async">
           </div>
           <div class="aspect-video rounded-lg overflow-hidden">
-            <img src="img/gallery-nashville-mural.jpg" alt="Nashville skyline mural" class="w-full h-full object-cover">
+            <img src="img/gallery-nashville-mural.jpg" alt="Nashville skyline mural" class="w-full h-full object-cover" loading="lazy" decoding="async">
           </div>
           <div class="aspect-video rounded-lg overflow-hidden">
-            <img src="img/gallery-lounge.jpg" alt="Vantage kitchen and lounge area" class="w-full h-full object-cover">
+            <img src="img/gallery-lounge.jpg" alt="Vantage kitchen and lounge area" class="w-full h-full object-cover" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Wave Divider: White to Navy -->
+    <div class="wave-divider" style="margin-bottom:-2px; background:#fff;">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,60 C480,0 960,50 1440,10 L1440,60 L0,60 Z" fill="#1B2A4A"/>
+      </svg>
+    </div>
+
     <!-- ============ BOTTOM CTA BANNER ============ -->
-    <section class="bg-navy py-16 px-6">
+    <section class="cta-banner bg-navy py-16 px-6">
       <div class="container-narrow text-center">
         <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Schedule a Tour Today and Experience Why Our Offices Are the Premier Choice for Your Business in Nashville</h2>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="cta-banner-buttons flex flex-wrap justify-center gap-4">
           <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Book Your Tour</button>
           <button onclick="openInquiryModal()" class="cta-button-outline border-white/60 text-white hover:bg-white hover:text-navy">Inquire for More Info</button>
         </div>
@@ -223,7 +241,7 @@
   <div id="inquiry-modal" class="fixed inset-0 z-[60] hidden">
     <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeInquiryModal()"></div>
     <div class="relative flex items-center justify-center min-h-full p-4">
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-lg p-8 relative">
+      <div class="glass-panel rounded-lg shadow-xl w-full max-w-lg p-8 relative">
         <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -238,24 +256,24 @@
             <div class="grid grid-cols-2 gap-4">
               <div>
                 <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
-                <input type="text" id="first-name" name="First Name" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze">
+                <input type="text" id="first-name" name="First Name" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze bg-white/70">
               </div>
               <div>
                 <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
-                <input type="text" id="last-name" name="Last Name" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze">
+                <input type="text" id="last-name" name="Last Name" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze bg-white/70">
               </div>
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-              <input type="email" id="email" name="Email" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze">
+              <input type="email" id="email" name="Email" required class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze bg-white/70">
             </div>
             <div>
               <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-              <input type="tel" id="phone" name="Phone" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze">
+              <input type="tel" id="phone" name="Phone" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze bg-white/70">
             </div>
             <div>
               <label for="interest" class="block text-sm font-medium text-gray-700 mb-1">What are you interested in?</label>
-              <select id="interest" name="Interest" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze text-gray-700">
+              <select id="interest" name="Interest" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze text-gray-700 bg-white/70">
                 <option value="">Select an option</option>
                 <option value="Virtual Office">Virtual Office</option>
                 <option value="Executive Workspace">Executive Workspace</option>
@@ -267,7 +285,7 @@
             </div>
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Tell us a bit about what you're looking for</label>
-              <textarea id="message" name="Message" rows="3" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze resize-none"></textarea>
+              <textarea id="message" name="Message" rows="3" class="w-full border border-warm-border rounded-md px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-bronze/50 focus:border-bronze resize-none bg-white/70"></textarea>
             </div>
             <button type="submit" class="cta-button w-full text-center">Send Inquiry</button>
           </div>
@@ -328,5 +346,11 @@
     Cal("init");
   </script>
   <script src="js/main.js"></script>
+
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>

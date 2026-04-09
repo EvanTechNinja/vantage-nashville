@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="view-transition" content="same-origin">
 
   <!-- Google Analytics GA4 — uncomment and replace GA_MEASUREMENT_ID when ready
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -22,8 +23,11 @@
 </head>
 <body class="font-body text-gray-900 bg-white">
 
+  <!-- Page Load Overlay -->
+  <div id="page-load-overlay" aria-hidden="true"></div>
+
   <!-- ============ HEADER / NAV ============ -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-border transition-shadow duration-300">
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md saturate-[1.8] border-b border-warm-border transition-shadow duration-300">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
       <a href="index.html" class="font-heading text-2xl font-bold tracking-[0.15em] text-navy">VANTAGE</a>
       <nav class="hidden md:flex items-center gap-8">
@@ -54,13 +58,13 @@
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="relative pt-20">
-      <div class="relative py-20 md:py-28">
-        <img src="img/hero-memberships.jpg" alt="Vantage office space" class="absolute inset-0 w-full h-full object-cover">
+    <section class="hero-section relative pt-20">
+      <div class="relative py-20 md:py-28 overflow-hidden">
+        <img src="img/hero-memberships.jpg" alt="Vantage office space" class="hero-bg absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-navy/70"></div>
         <div class="relative max-w-7xl mx-auto px-6 text-center">
-          <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Vantage Memberships</h1>
-          <p class="font-heading text-xl text-bronze-light">Membership services to fit your needs</p>
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4" style="opacity:0">Vantage Memberships</h1>
+          <p class="hero-subtitle font-heading text-xl gradient-text">Membership services to fit your needs</p>
         </div>
       </div>
     </section>
@@ -68,12 +72,12 @@
     <!-- ============ MEMBERSHIP TIERS ============ -->
     <section class="section-padding bg-white">
       <div class="container-narrow">
-        <div class="grid lg:grid-cols-3 gap-8 items-start">
+        <div class="membership-grid grid lg:grid-cols-3 gap-8 items-start">
 
           <!-- Tier 1: Virtual Office -->
           <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="img/membership-virtual.jpg" alt="Vantage professional office corridor" class="w-full h-full object-cover">
+              <img src="img/membership-virtual.jpg" alt="Vantage professional office corridor" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-8">
               <h3 class="font-heading text-2xl font-semibold text-navy mb-2">Virtual Office</h3>
@@ -96,7 +100,7 @@
           <div class="bg-white border-2 border-bronze rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow duration-300 relative lg:-mt-4 lg:mb-[-1rem]">
             <span class="absolute top-4 right-4 bg-bronze text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide z-10">Most Popular</span>
             <div class="aspect-video overflow-hidden">
-              <img src="img/membership-executive.jpg" alt="Executive coworking space with Nashville mural" class="w-full h-full object-cover">
+              <img src="img/membership-executive.jpg" alt="Executive coworking space with Nashville mural" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-8">
               <h3 class="font-heading text-2xl font-semibold text-navy mb-2">Executive Workspace</h3>
@@ -122,7 +126,7 @@
           <!-- Tier 3: Private Offices -->
           <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card hover:shadow-lg transition-shadow duration-300">
             <div class="aspect-video overflow-hidden">
-              <img src="img/membership-private.jpg" alt="Private office with barn door" class="w-full h-full object-cover">
+              <img src="img/membership-private.jpg" alt="Private office with barn door" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-8">
               <h3 class="font-heading text-2xl font-semibold text-navy mb-2">Private Offices</h3>
@@ -158,20 +162,20 @@
           <p class="text-gray-500 text-lg">Included with every membership tier</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          <div class="bg-white rounded-lg p-6 shadow-card">
+        <div class="enhancements-grid grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-lg p-6 shadow-card">
             <h4 class="font-heading text-lg font-semibold text-navy mb-2">Wealth Building Masterminds</h4>
             <p class="text-gray-600 text-sm">In-person masterminds focused on building and growing your wealth.</p>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-card">
+          <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-lg p-6 shadow-card">
             <h4 class="font-heading text-lg font-semibold text-navy mb-2">Quarterly Business Mastermind</h4>
             <p class="text-gray-600 text-sm">A high-level networking experience offered once per quarter.</p>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-card">
+          <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-lg p-6 shadow-card">
             <h4 class="font-heading text-lg font-semibold text-navy mb-2">Community Networking</h4>
             <p class="text-gray-600 text-sm">Complimentary networking opportunities designed to foster meaningful connections.</p>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-card">
+          <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-lg p-6 shadow-card">
             <h4 class="font-heading text-lg font-semibold text-navy mb-2">Leverage to Scale Series</h4>
             <p class="text-gray-600 text-sm">Held monthly, with a quarterly focus on career visioning and strategic growth.</p>
           </div>
@@ -180,10 +184,10 @@
     </section>
 
     <!-- ============ BOTTOM CTA BANNER ============ -->
-    <section class="bg-navy py-16 px-6">
+    <section class="cta-banner bg-navy py-16 px-6">
       <div class="container-narrow text-center">
         <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Schedule a Tour Today and Experience Why Our Offices Are the Premier Choice for Your Business in Nashville</h2>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="cta-banner-buttons flex flex-wrap justify-center gap-4">
           <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Book Your Tour</button>
           <button onclick="openInquiryModal()" class="cta-button-outline border-white/60 text-white hover:bg-white hover:text-navy">Inquire for More Info</button>
         </div>
@@ -196,7 +200,7 @@
   <div id="inquiry-modal" class="fixed inset-0 z-[60] hidden">
     <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeInquiryModal()"></div>
     <div class="relative flex items-center justify-center min-h-full p-4">
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-lg p-8 relative">
+      <div class="glass-panel rounded-lg shadow-xl w-full max-w-lg p-8 relative">
         <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -297,5 +301,11 @@
     Cal("init");
   </script>
   <script src="js/main.js"></script>
+
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>

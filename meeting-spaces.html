@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <meta name="view-transition" content="same-origin">
 
   <!-- Google Analytics GA4 — uncomment and replace GA_MEASUREMENT_ID when ready
   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -22,8 +23,11 @@
 </head>
 <body class="font-body text-gray-900 bg-white">
 
+  <!-- Page Load Overlay -->
+  <div id="page-load-overlay" aria-hidden="true"></div>
+
   <!-- ============ HEADER / NAV ============ -->
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-border transition-shadow duration-300">
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md saturate-[1.8] border-b border-warm-border transition-shadow duration-300">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
       <a href="index.html" class="font-heading text-2xl font-bold tracking-[0.15em] text-navy">VANTAGE</a>
       <nav class="hidden md:flex items-center gap-8">
@@ -54,13 +58,13 @@
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="relative pt-20">
-      <div class="relative py-20 md:py-28">
-        <img src="img/hero-meeting-spaces.jpg" alt="Vantage meeting spaces corridor" class="absolute inset-0 w-full h-full object-cover">
+    <section class="hero-section relative pt-20">
+      <div class="relative py-20 md:py-28 overflow-hidden">
+        <img src="img/hero-meeting-spaces.jpg" alt="Vantage meeting spaces corridor" class="hero-bg absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-navy/70"></div>
         <div class="relative max-w-7xl mx-auto px-6 text-center">
-          <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Vantage Meeting Spaces</h1>
-          <p class="font-heading text-xl text-bronze-light">Thoughtfully designed venues for every need</p>
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4" style="opacity:0">Vantage Meeting Spaces</h1>
+          <p class="hero-subtitle font-heading text-xl gradient-text">Thoughtfully designed venues for every need</p>
         </div>
       </div>
     </section>
@@ -76,9 +80,9 @@
         <div class="grid lg:grid-cols-2 gap-8">
 
           <!-- Learning Center -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-learning-center.jpg" alt="Vantage Learning Center" class="w-full h-full object-cover">
+              <img src="img/space-learning-center.jpg" alt="Vantage Learning Center" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -112,9 +116,9 @@
           </div>
 
           <!-- Board Room -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-boardroom.jpg" alt="Vantage Board Room" class="w-full h-full object-cover">
+              <img src="img/space-boardroom.jpg" alt="Vantage Board Room" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -147,9 +151,9 @@
           </div>
 
           <!-- Conference Rooms -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-conference.jpg" alt="Vantage Conference Room" class="w-full h-full object-cover">
+              <img src="img/space-conference.jpg" alt="Vantage Conference Room" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -181,9 +185,9 @@
           </div>
 
           <!-- The Studio -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-studio.jpg" alt="Vantage Studio space" class="w-full h-full object-cover">
+              <img src="img/space-studio.jpg" alt="Vantage Studio space" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -216,9 +220,9 @@
           </div>
 
           <!-- The Cafe -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-cafe.jpg" alt="Vantage Cafe with bar seating" class="w-full h-full object-cover">
+              <img src="img/space-cafe.jpg" alt="Vantage Cafe with bar seating" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -246,9 +250,9 @@
           </div>
 
           <!-- Drop Zone (Day Pass) -->
-          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+          <div class="space-card bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
             <div class="aspect-video overflow-hidden">
-              <img src="img/space-dropzone.jpg" alt="Vantage Drop Zone coworking space" class="w-full h-full object-cover">
+              <img src="img/space-dropzone.jpg" alt="Vantage Drop Zone coworking space" class="w-full h-full object-cover" loading="lazy" decoding="async">
             </div>
             <div class="p-6">
               <div class="flex items-start justify-between mb-3">
@@ -279,10 +283,10 @@
     </section>
 
     <!-- ============ BOTTOM CTA BANNER ============ -->
-    <section class="bg-navy py-16 px-6">
+    <section class="cta-banner bg-navy py-16 px-6">
       <div class="container-narrow text-center">
         <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Schedule a Tour Today and Experience Why Our Offices Are the Premier Choice for Your Business in Nashville</h2>
-        <div class="flex flex-wrap justify-center gap-4">
+        <div class="cta-banner-buttons flex flex-wrap justify-center gap-4">
           <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Book Your Tour</button>
           <button onclick="openInquiryModal()" class="cta-button-outline border-white/60 text-white hover:bg-white hover:text-navy">Inquire for More Info</button>
         </div>
@@ -295,7 +299,7 @@
   <div id="inquiry-modal" class="fixed inset-0 z-[60] hidden">
     <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeInquiryModal()"></div>
     <div class="relative flex items-center justify-center min-h-full p-4">
-      <div class="bg-white rounded-lg shadow-xl w-full max-w-lg p-8 relative">
+      <div class="glass-panel rounded-lg shadow-xl w-full max-w-lg p-8 relative">
         <button onclick="closeInquiryModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors" aria-label="Close">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -396,5 +400,11 @@
     Cal("init");
   </script>
   <script src="js/main.js"></script>
+
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>
