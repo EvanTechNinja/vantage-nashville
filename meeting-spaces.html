@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Spaces — Vantage Nashville</title>
+  <meta name="description" content="Vantage meeting and event spaces in Nashville. Learning center, boardroom, conference rooms, podcast studio, cafe, and day passes. Book your space today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Analytics GA4 — uncomment and replace GA_MEASUREMENT_ID when ready
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+</head>
+<body class="font-body text-gray-900 bg-white">
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-border transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="font-heading text-2xl font-bold tracking-[0.15em] text-navy">VANTAGE</a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-bronze transition-colors">Home</a>
+        <a href="memberships.html" class="text-sm font-medium text-gray-600 hover:text-bronze transition-colors">Memberships</a>
+        <a href="meeting-spaces.html" class="text-sm font-medium text-navy hover:text-bronze transition-colors">Meeting Spaces</a>
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button">Schedule a Tour</button>
+      </nav>
+      <div class="flex items-center gap-4 md:hidden">
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button text-xs px-4 py-2">Tour</button>
+        <button id="mobile-menu-toggle" class="p-2 text-navy" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-warm-border">
+      <nav class="flex flex-col px-6 py-4 gap-3">
+        <a href="index.html" class="text-sm font-medium text-gray-600 py-2">Home</a>
+        <a href="memberships.html" class="text-sm font-medium text-gray-600 py-2">Memberships</a>
+        <a href="meeting-spaces.html" class="text-sm font-medium text-navy py-2">Meeting Spaces</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-20">
+      <!-- PLACEHOLDER: Replace with real meeting space hero image (boardroom or training room) -->
+      <div class="bg-gradient-to-br from-navy-dark via-navy to-navy-light py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-white mb-4">Vantage Meeting Spaces</h1>
+          <p class="font-heading text-xl text-bronze-light">Thoughtfully designed venues for every need</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING NOTE ============ -->
+    <div class="bg-warm-bg py-4 px-6 text-center">
+      <p class="text-sm text-gray-500">Rates shown as <span class="font-semibold text-gray-700">Non-Member</span> | <span class="font-semibold text-bronze">Member</span></p>
+    </div>
+
+    <!-- ============ MEETING SPACES ============ -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow">
+        <div class="grid lg:grid-cols-2 gap-8">
+
+          <!-- Learning Center -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Learning Center photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: Learning Center</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">Learning Center</h3>
+                <span class="text-xs bg-navy/5 text-navy px-2 py-1 rounded font-medium whitespace-nowrap ml-3">Up to 115</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-3">Capacity: 70 standard (up to 115 theater style, chairs included for 70)</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$350/hr</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$280/hr</span>
+              </div>
+              <!-- Amenities Toggle -->
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>6x 65" presentation TVs</li>
+                <li>3 handheld microphones &amp; clicker</li>
+                <li>4K webcam for recording/zoom/streaming</li>
+                <li>Sound system with full room audio &amp; ceiling microphones</li>
+                <li>Whiteboards upon request</li>
+                <li>Large presentation notepads for purchase</li>
+                <li>Outside food and beverage permitted</li>
+                <li>Complimentary parking</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Board Room -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Board Room photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: Board Room</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">Board Room</h3>
+                <span class="text-xs bg-navy/5 text-navy px-2 py-1 rounded font-medium whitespace-nowrap ml-3">Up to 20</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-3">Capacity: 20 (U-shape seating)</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$100/hr</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$75/hr</span>
+              </div>
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>6x 65" presentation TVs</li>
+                <li>3 handheld microphones &amp; clicker</li>
+                <li>4K webcam for recording/zoom/streaming</li>
+                <li>Sound system with full room audio &amp; ceiling microphones</li>
+                <li>Whiteboards upon request</li>
+                <li>Large presentation notepads for purchase</li>
+                <li>Outside food and beverage permitted</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+                <li>Complimentary parking</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Conference Rooms -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Conference Room photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: Conference Room</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">Conference Rooms</h3>
+                <span class="text-xs bg-navy/5 text-navy px-2 py-1 rounded font-medium whitespace-nowrap ml-3">Up to 6</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-2">Three available: <span class="text-navy font-medium">The Ryman</span>, <span class="text-navy font-medium">The Bluebird Cafe</span>, <span class="text-navy font-medium">The Grand Ole Opry</span></p>
+              <p class="text-sm text-gray-500 mb-3">Capacity: 6 each (conference setup)</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$85/hr</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$55/hr</span>
+              </div>
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>1x 65" presentation TV</li>
+                <li>4K conferencing webcam</li>
+                <li>Whiteboards upon request</li>
+                <li>Large presentation notepads for purchase</li>
+                <li>Outside food and beverage permitted</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+                <li>Complimentary parking</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- The Studio -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Studio photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: The Studio</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">The Studio</h3>
+                <span class="text-xs bg-navy/5 text-navy px-2 py-1 rounded font-medium whitespace-nowrap ml-3">Up to 5</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-3">Capacity: 5</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$100/hr</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$75/hr</span>
+              </div>
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>Fully decorated studio space</li>
+                <li>USB-C audio interface</li>
+                <li>2 Rode condensers VLR</li>
+                <li>Rode USB microphone &amp; USBC adapter</li>
+                <li>4K webcam</li>
+                <li>2 programmable lights</li>
+                <li>Ready for multi-cam setup</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+                <li>Complimentary parking</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- The Cafe -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Cafe photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: The Cafe</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">The Cafe</h3>
+                <span class="text-xs bg-navy/5 text-navy px-2 py-1 rounded font-medium whitespace-nowrap ml-3">Up to 40</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-3">Capacity: 40 (standing room)</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$150/hr</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$75/hr</span>
+              </div>
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>Modern kitchen space with refrigerator, sink, microwave &amp; food prep space</li>
+                <li>Flex space with chairs, table &amp; 65" TV</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+                <li>Complimentary parking</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Drop Zone (Day Pass) -->
+          <div class="bg-white border border-warm-border rounded-lg overflow-hidden shadow-card">
+            <!-- PLACEHOLDER: Replace with Drop Zone / coworking area photo -->
+            <div class="aspect-video bg-stone-100 flex items-center justify-center border-b border-stone-200">
+              <span class="text-stone-400 text-sm">Photo: Drop Zone</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-start justify-between mb-3">
+                <h3 class="font-heading text-xl font-semibold text-navy">Drop Zone <span class="text-sm font-normal text-gray-400">(Day Pass)</span></h3>
+              </div>
+              <p class="text-sm text-gray-500 mb-3">Available Monday through Friday, 8am&ndash;5pm</p>
+              <div class="flex items-baseline gap-2 mb-4">
+                <span class="text-lg font-semibold text-gray-700">$75/day</span>
+                <span class="text-gray-400">|</span>
+                <span class="text-lg font-semibold text-bronze">$25/day</span>
+              </div>
+              <button class="amenity-toggle flex items-center gap-2 text-sm text-gray-500 hover:text-navy transition-colors cursor-pointer" aria-expanded="false">
+                <svg class="w-4 h-4 transition-transform duration-200 amenity-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                View Amenities
+              </button>
+              <ul class="amenity-list hidden mt-3 text-gray-600 text-sm space-y-1.5 pl-6">
+                <li>Reserved workspace</li>
+                <li>Flexible co-working spaces</li>
+                <li>High-speed complimentary wifi</li>
+                <li>Local coffee, premium tea &amp; filtered water</li>
+                <li>Complimentary parking</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM CTA BANNER ============ -->
+    <section class="bg-navy py-16 px-6">
+      <div class="container-narrow text-center">
+        <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Schedule a Tour Today and Experience Why Our Offices Are the Premier Choice for Your Business in Nashville</h2>
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Book Your Tour</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-dark text-white py-16 px-6">
+    <div class="container-narrow">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <p class="font-heading text-2xl font-bold tracking-[0.15em] mb-3">VANTAGE</p>
+          <p class="text-white/60 text-sm italic">Built for those building more.</p>
+        </div>
+        <div>
+          <p class="text-white/80 text-sm leading-relaxed">4101 Charlotte Ave Suite D160<br>Nashville, TN 37209</p>
+          <p class="text-white/80 text-sm mt-2"><a href="tel:6154253600" class="hover:text-bronze-light transition-colors">615-425-3600</a></p>
+          <p class="text-white/80 text-sm mt-1"><a href="mailto:sarastephens@kw.com" class="hover:text-bronze-light transition-colors">sarastephens@kw.com</a></p>
+        </div>
+        <div>
+          <nav class="flex flex-col gap-2">
+            <a href="index.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Home</a>
+            <a href="memberships.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Memberships</a>
+            <a href="meeting-spaces.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Meeting Spaces</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-6 text-center">
+        <p class="text-white/40 text-xs">&copy; 2025 Vantage. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cal.com Embed -->
+  <script>
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || [];
+          if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init");
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

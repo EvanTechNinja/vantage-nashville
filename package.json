@@ -1,0 +1,13 @@
+{
+  "name": "vantage-nashville",
+  "version": "1.0.0",
+  "description": "Vantage Coworking — Nashville's Premier Workspace",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./input.css -o ./css/styles.css --minify",
+    "watch:css": "npx tailwindcss -i ./input.css -o ./css/styles.css --watch",
+    "dev": "npx tailwindcss -i ./input.css -o ./css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

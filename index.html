@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vantage — Nashville's Premier Workspace</title>
+  <meta name="description" content="Vantage is Nashville's premier coworking space. Private offices, executive workspaces, meeting rooms, and virtual offices. Schedule a tour today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Google Analytics GA4 — uncomment and replace GA_MEASUREMENT_ID when ready
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
+</head>
+<body class="font-body text-gray-900 bg-white">
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-warm-border transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="index.html" class="font-heading text-2xl font-bold tracking-[0.15em] text-navy">
+        <!-- PLACEHOLDER: Replace with SVG/PNG logo when available -->
+        VANTAGE
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-medium text-navy hover:text-bronze transition-colors">Home</a>
+        <a href="memberships.html" class="text-sm font-medium text-gray-600 hover:text-bronze transition-colors">Memberships</a>
+        <a href="meeting-spaces.html" class="text-sm font-medium text-gray-600 hover:text-bronze transition-colors">Meeting Spaces</a>
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button">Schedule a Tour</button>
+      </nav>
+
+      <!-- Mobile: CTA + Hamburger -->
+      <div class="flex items-center gap-4 md:hidden">
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button text-xs px-4 py-2">Tour</button>
+        <button id="mobile-menu-toggle" class="p-2 text-navy" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-warm-border">
+      <nav class="flex flex-col px-6 py-4 gap-3">
+        <a href="index.html" class="text-sm font-medium text-navy py-2">Home</a>
+        <a href="memberships.html" class="text-sm font-medium text-gray-600 py-2">Memberships</a>
+        <a href="meeting-spaces.html" class="text-sm font-medium text-gray-600 py-2">Meeting Spaces</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="relative pt-20">
+      <!-- PLACEHOLDER: Replace with real hero image (1920x800px recommended, wide interior shot) -->
+      <div class="bg-gradient-to-br from-navy-dark via-navy to-navy-light min-h-[600px] flex items-center">
+        <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 w-full">
+          <div class="max-w-2xl">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">Welcome to Vantage</h1>
+            <p class="font-heading text-xl md:text-2xl text-bronze-light mb-6">Discover Nashville's Premier Workspace</p>
+            <p class="text-white/80 text-lg leading-relaxed mb-8">Vantage, where elevated workspace meets intention and opportunity. Designed for professionals, we offer an exceptional environment for freelancers, entrepreneurs, and small businesses seeking a refined office experience in Nashville.</p>
+            <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Schedule a Tour</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO WE ARE ============ -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow">
+        <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-3">Who We Are</h2>
+        <p class="font-heading text-xl text-bronze mb-6">Vantage. Built for those building more.</p>
+        <p class="text-gray-600 text-lg leading-relaxed max-w-3xl">Designed as a premier workspace community, Vantage is rooted in the belief that exceptional service and an elevated environment go hand in hand. Whether you are hosting events in our state of the art learning facility, leading boardroom meetings, utilizing flexible workspaces, or working on site in a professional office setting where you can confidently welcome your clients, Vantage offers a seamless solution tailored to your success.</p>
+      </div>
+    </section>
+
+    <!-- ============ VALUE PROPS ============ -->
+    <section class="section-padding bg-warm-bg">
+      <div class="container-narrow">
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+
+          <!-- Prime Location -->
+          <div class="text-center md:text-left">
+            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-navy mb-3">Prime Location</h3>
+            <p class="text-gray-600 leading-relaxed">Located in the heart of Nashville, our office space is just minutes away from major business hubs, trendy eateries, and entertainment spots, giving you the perfect blend of work and play.</p>
+          </div>
+
+          <!-- Membership Services -->
+          <div class="text-center md:text-left">
+            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-navy mb-3">Membership Services to Fit Your Needs</h3>
+            <p class="text-gray-600 leading-relaxed">Whether you are seeking a virtual office with mail and package concierge, an executive office with 24 hour access, or a flexible monthly office solution, we offer a collection of membership experiences designed to align seamlessly with your business needs.</p>
+          </div>
+
+          <!-- Event Spaces -->
+          <div class="text-center md:text-left">
+            <div class="w-14 h-14 bg-navy/10 rounded-lg flex items-center justify-center mb-5 mx-auto md:mx-0">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+            </div>
+            <h3 class="font-heading text-xl font-semibold text-navy mb-3">Competitively Priced Event Spaces</h3>
+            <p class="text-gray-600 leading-relaxed">From private conferences to our state of the art training room, Vantage offers a collection of thoughtfully designed venues tailored to your needs. Each space is complemented by a variety of premium amenities, creating a seamless and elevated experience for both you and your attendees.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEMBERSHIP OVERVIEW ============ -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow">
+        <div class="text-center mb-12">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold text-navy mb-3">Membership Options</h2>
+          <p class="text-gray-500 text-lg">Find the workspace solution that fits your business</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Virtual Office -->
+          <div class="bg-white border border-warm-border rounded-lg p-8 shadow-card hover:shadow-lg transition-shadow duration-300">
+            <h3 class="font-heading text-xl font-semibold text-navy mb-2">Virtual Office</h3>
+            <p class="text-bronze font-semibold text-2xl mb-4">From $49<span class="text-sm text-gray-400 font-normal">/mo</span></p>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Professional mailing address</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> 1 free coworking day per month</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Mail &amp; package concierge</li>
+            </ul>
+            <a href="memberships.html" class="cta-button-outline w-full text-center block">Learn More</a>
+          </div>
+
+          <!-- Executive Workspace -->
+          <div class="bg-white border-2 border-bronze rounded-lg p-8 shadow-card hover:shadow-lg transition-shadow duration-300 relative">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-bronze text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Most Popular</span>
+            <h3 class="font-heading text-xl font-semibold text-navy mb-2">Executive Workspace</h3>
+            <p class="text-bronze font-semibold text-2xl mb-4">$299<span class="text-sm text-gray-400 font-normal">/mo</span></p>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> 24/7 building access</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Open co-working spaces</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Complimentary parking &amp; wifi</li>
+            </ul>
+            <a href="memberships.html" class="cta-button w-full text-center block">Learn More</a>
+          </div>
+
+          <!-- Private Offices -->
+          <div class="bg-white border border-warm-border rounded-lg p-8 shadow-card hover:shadow-lg transition-shadow duration-300">
+            <h3 class="font-heading text-xl font-semibold text-navy mb-2">Private Offices</h3>
+            <p class="text-bronze font-semibold text-2xl mb-4">From $500<span class="text-sm text-gray-400 font-normal">/mo</span></p>
+            <ul class="text-gray-600 text-sm space-y-2 mb-6">
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Lockable private office</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> Front desk receptionist</li>
+              <li class="flex items-start gap-2"><span class="text-bronze mt-0.5">&#10003;</span> 24/7 access &amp; parking</li>
+            </ul>
+            <a href="memberships.html" class="cta-button-outline w-full text-center block">Learn More</a>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="memberships.html" class="text-bronze hover:text-bronze-dark font-medium transition-colors">View All Membership Details &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXCLUSIVE ENHANCEMENTS ============ -->
+    <section class="bg-warm-bg py-12 px-6">
+      <div class="container-narrow text-center">
+        <p class="text-gray-600 text-lg"><span class="text-navy font-semibold">All members</span> receive complimentary access to Wealth Building Masterminds, community networking events, and our Leverage to Scale Series.</p>
+      </div>
+    </section>
+
+    <!-- ============ PHOTO GALLERY STRIP ============ -->
+    <section class="section-padding bg-white">
+      <div class="container-narrow">
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- PLACEHOLDER: Replace src with real photo. Recommended: workspace interior, 1200x800px -->
+          <div class="aspect-video bg-stone-100 rounded-lg flex items-center justify-center border border-stone-200">
+            <span class="text-stone-400 text-sm">Photo: workspace interior</span>
+          </div>
+          <!-- PLACEHOLDER: Replace src with real photo. Recommended: Nashville art/mural, 1200x800px -->
+          <div class="aspect-video bg-stone-100 rounded-lg flex items-center justify-center border border-stone-200">
+            <span class="text-stone-400 text-sm">Photo: Nashville art/mural</span>
+          </div>
+          <!-- PLACEHOLDER: Replace src with real photo. Recommended: open office area, 1200x800px -->
+          <div class="aspect-video bg-stone-100 rounded-lg flex items-center justify-center border border-stone-200">
+            <span class="text-stone-400 text-sm">Photo: open office area</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOTTOM CTA BANNER ============ -->
+    <section class="bg-navy py-16 px-6">
+      <div class="container-narrow text-center">
+        <h2 class="font-heading text-2xl md:text-3xl font-bold text-white mb-6">Schedule a Tour Today and Experience Why Our Offices Are the Premier Choice for Your Business in Nashville</h2>
+        <button data-cal-link="agent-services-a0784h/30min" data-cal-config='{"layout":"popup"}' class="cta-button-light">Book Your Tour</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-navy-dark text-white py-16 px-6">
+    <div class="container-narrow">
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Logo + Tagline -->
+        <div>
+          <!-- PLACEHOLDER: Replace with SVG/PNG logo when available -->
+          <p class="font-heading text-2xl font-bold tracking-[0.15em] mb-3">VANTAGE</p>
+          <p class="text-white/60 text-sm italic">Built for those building more.</p>
+        </div>
+        <!-- Contact -->
+        <div>
+          <p class="text-white/80 text-sm leading-relaxed">4101 Charlotte Ave Suite D160<br>Nashville, TN 37209</p>
+          <p class="text-white/80 text-sm mt-2"><a href="tel:6154253600" class="hover:text-bronze-light transition-colors">615-425-3600</a></p>
+          <p class="text-white/80 text-sm mt-1"><a href="mailto:sarastephens@kw.com" class="hover:text-bronze-light transition-colors">sarastephens@kw.com</a></p>
+        </div>
+        <!-- Nav Links -->
+        <div>
+          <nav class="flex flex-col gap-2">
+            <a href="index.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Home</a>
+            <a href="memberships.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Memberships</a>
+            <a href="meeting-spaces.html" class="text-white/80 text-sm hover:text-bronze-light transition-colors">Meeting Spaces</a>
+          </nav>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-10 pt-6 text-center">
+        <p class="text-white/40 text-xs">&copy; 2025 Vantage. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cal.com Embed -->
+  <script>
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; }
+        if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || [];
+          if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init");
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
