@@ -1,3 +1,25 @@
+// ============ INQUIRY MODAL ============
+function openInquiryModal() {
+  var modal = document.getElementById('inquiry-modal');
+  if (modal) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeInquiryModal() {
+  var modal = document.getElementById('inquiry-modal');
+  if (modal) {
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeInquiryModal();
+});
+
 // ============ MOBILE NAV TOGGLE ============
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('mobile-menu-toggle');
